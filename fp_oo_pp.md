@@ -20,9 +20,9 @@
 
 - Expressions have values. A functional program is an expression whose value is a sequence of instructions for the computer to carry out.
 - Often recursive.
-- Always returns the same output for a given input.
+- Always returns the same output for a given input (idempotence).
 - Order of evaluation is usually undefined.
-- Must be stateless. i.e. No operation can have side effects.
+- Must be stateless. i.e. No operation can have side effects. (purity)
 - Good fit for parallel execution
 - Tends to emphasize a divide and conquer approach.
 - May have the feature of Lazy Evaluation.
@@ -46,4 +46,4 @@ In a purely procedural language there would be no expressions, everything would 
 
 Functional programming would emphasize the divide-and-conquer approach, where the problem is divided into sub-problem, then each sub-problem is solved (creating a function to solve that sub problem) and the results are combined to create the answer for the whole problem.
 
-Lastly, Objective programming would mimic the real world by create a mini-world inside the computer with many objects, each of which has a (somewhat) unique characteristics, and interacts with others. From those interactions the result would emerge.
+Lastly, Objective programming would mimic the real world by creating a mini-world inside the computer with many objects, each of which has a (somewhat) unique characteristics, and interacts with others. From those interactions the result would emerge.
