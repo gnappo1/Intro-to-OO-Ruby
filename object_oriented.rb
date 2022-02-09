@@ -1,22 +1,25 @@
-class Pet
-    attr_accessor :name
-    #attr_writer :name
-    #attr_reader :name
+require "pry"
 
-    def initialize(name) #we decide to set a name property right at birth - when the instance is initialized
-        @name = name
+class Dog
+    attr_accessor :name, :age
+    attr_reader :breed
+    def initialize(breed, age = 0)
+        @breed = breed
+        @age = age
     end
 
-    def self.all #class methods start with self.
-        puts "Congrats this is a class method!"
-    end
-
-    def say_hello #instance methods look exactly like the methods you created so far, but they are defined inside a class
-        p "Hello #{name}" #do not use @name, accessing variables directly is not a good design and you should always wrap variables inside methods and use those methods
+    def introduce_yourself
+        puts "Hello, my name is #{name}, and my age is #{age} and my breed is #{breed}"
     end
 end
 
+fido = Dog.new("Labradoodle", 2)
+rover = Dog.new("jackapoo")
+fido.name = "Fido"
+rover.name = "Rover"
+puts fido.name
+puts rover.name
 
-pongo = Pet.new("Pongo") #since we have an initialize and the name is required at birth, we HAVE TO pass an argument
-pongo.say_hello #instance method used on the instance pongo
-Pet.all #class method used on the class itself
+fido.introduce_yourself
+rover.introduce_yourself
+# binding.pry

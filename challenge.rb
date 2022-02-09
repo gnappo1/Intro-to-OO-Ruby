@@ -1,6 +1,6 @@
 require 'pry'
 
-# Build your own person class
+# Build your own Person class
 # A person should have a name, a hobby, and a hometown
 # The hometown will not be changeable
 # Create an instance method called #greeting that will introduce a person and print out both the name and hometown. The formatting is up to you!
